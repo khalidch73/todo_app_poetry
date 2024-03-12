@@ -1,0 +1,8 @@
+FastAPI
+SQLAlchemy
+PostgresSQL
+Streamlit
+psycopg2
+requests 
+Axios
+httpx
