@@ -1,7 +1,7 @@
 FastAPI
 SQLAlchemy
 PostgresSQL
-Streamlit
+streamlit
 psycopg2
 requests 
 Axios

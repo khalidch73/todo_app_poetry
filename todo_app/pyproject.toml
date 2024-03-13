@@ -14,6 +14,7 @@ psycopg2 = "^2.9.9"
 axios = "^0.4.0"
 pytest = "^8.1.1"
 httpx = "^0.27.0"
+streamlit = "^1.32.1"
 
 
 [build-system]
