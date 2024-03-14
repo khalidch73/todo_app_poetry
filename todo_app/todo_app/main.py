@@ -8,7 +8,7 @@ app = FastAPI(title="Todos API",
     version="0.0.1",
     servers=[
         {
-            "url": "http://127.0.0.1:8000", # ADD NGROK URL Here Before Creating GPT Action
+            "url": "https://pleasantly-pumped-gecko.ngrok-free.app", # ADD NGROK URL Here Before Creating GPT Action
             "description": "Development Server"
         }
         ])
@@ -90,13 +90,13 @@ def delete_todo_by_id(todo_id: int, db: Session = Depends(get_db)):
     db.commit()
     return {"message": "Todo deleted successfully"}
 
-# 08 Endpoint to delete all todos from the database
-@app.delete("/todos/")
-def delete_all_todos(db: Session = Depends(get_db)):
-    try:
-        # Delete all todos from the database
-        db.query(database.Todo).delete()
-        db.commit()
-        return {"message": "All todos deleted successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# # 08 Endpoint to delete all todos from the database
+# @app.delete("/todos/")
+# def delete_all_todos(db: Session = Depends(get_db)):
+#     try:
+#         # Delete all todos from the database
+#         db.query(database.Todo).delete()
+#         db.commit()
+#         return {"message": "All todos deleted successfully"}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
